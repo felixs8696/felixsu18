@@ -1,24 +1,54 @@
+@import "public/stylesheets/_global.scss";
+@import "public/stylesheets/_variables.scss";
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
-  background-color: #222;
   height: 150px;
   padding: 20px;
-  color: white;
+  color: black;
+  font-weight: 700;
 }
 
-.App-intro {
-  font-size: large;
+.App-logo {
+  position: fixed;
+  height: 80px;
+  top: 30px;
+  left: 30px;
+  z-index: 1000;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.title-container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+
+  .title { @include light-font; }
+
+  .intro { font-size: large; }
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+
+  .panel {
+    width: 50%;
+    height: 100%;
+    position: relative;
+  }
+}
+
+.profile-photo {
+  float: left;
+  background: url("../public/img/linkedin_2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

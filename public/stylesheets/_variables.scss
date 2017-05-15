@@ -1,0 +1,14 @@
+@mixin header-font {
+	font-weight: 700;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+@mixin regular-font {
+	font-weight: 400;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+@mixin light-font {
+	font-weight: 300;
+	font-family: 'Source Sans Pro', sans-serif;
+}
