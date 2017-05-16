@@ -36,12 +36,12 @@
 .background {
   width: 100%;
   height: 100vh;
-  position: absolute;
+  /*position: relative;*/
 
   .panel {
     width: 50%;
     height: 100%;
-    position: relative;
+    /*position: absolute;*/
   }
 }
 
@@ -57,4 +57,35 @@
   background-position: right;
   background-repeat: no-repeat;
   background-size: auto 100%;
+}
+
+.navbar {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 180px 0px;
+  z-index: 1000;
+}
+
+.circle {
+  color: lightgray;
+  border: 2px solid #EEEEEE;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.3em;
+  vertical-align: middle;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: none;
+}
+
+.circle:hover {
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.14), 0 0 7px 0 rgba(0,0,0,0.12), 0 0 1px -1px rgba(0,0,0,0.2);
 }

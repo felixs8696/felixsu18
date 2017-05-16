@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import FaHeartO from 'react-icons/lib/fa/heart-o';
+import FaTerminal from 'react-icons/lib/fa/terminal';
+import FaGraduationCap from 'react-icons/lib/fa/graduation-cap';
+import FaCameraRetro from 'react-icons/lib/fa/camera-retro';
+import FaMusic from 'react-icons/lib/fa/music';
 import { fadeInUp, fadeOutUp, fadeInDown, slideInDown } from 'react-animations';
 import Radium from 'radium';
 import {StyleRoot} from 'radium';
@@ -74,6 +78,12 @@ function AboutPanelContent(props) {
 function NavBar(props) {
   return(
     <div className="navbar">
+      <Button className="circle white"><FaHeartO/></Button>
+      <Button className="circle white"><FaTerminal/></Button>
+      <Button className="circle white"><FaGraduationCap/></Button>
+      <Button className="circle white"><FaMusic/></Button>
+      <Button className="circle white"><FaCameraRetro/></Button>
+      <Button className="circle white"><FaHeartO/></Button>
     </div>
   )
 }
@@ -103,6 +113,7 @@ class App extends Component {
           <img src="/img/logo.png" className="App-logo" alt="logo" />
           <div className="background">
             {this.state.leftPanel}
+            <NavBar />
             {this.state.rightPanel}
           </div>
         </div>
