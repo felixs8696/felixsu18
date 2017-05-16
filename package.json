@@ -6,7 +6,8 @@
     "radium": "^0.18.2",
     "react": "^15.5.4",
     "react-animations": "^0.1.0",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-icons": "^2.2.5"
   },
   "devDependencies": {
     "npm-run-all": "^4.0.2",

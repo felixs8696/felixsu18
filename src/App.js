@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import FaHeartO from 'react-icons/lib/fa/heart-o';
 import { fadeInUp, fadeOutUp, fadeInDown, slideInDown } from 'react-animations';
 import Radium from 'radium';
 import {StyleRoot} from 'radium';
