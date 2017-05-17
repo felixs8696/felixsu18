@@ -1,9 +1,9 @@
 @import "public/stylesheets/_global.scss";
 @import "public/stylesheets/_variables.scss";
 
-.App {
+/*.App {
   text-align: center;
-}
+}*/
 
 .App-header {
   height: 150px;
@@ -20,17 +20,18 @@
   z-index: 1000;
 }
 
-.title-container {
+.center-container {
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
+  padding: 100px;
 
   .title { @include light-font; }
-
   .intro { font-size: large; }
+  .about { line-height: 2em; }
 }
 
 .background {
@@ -61,7 +62,7 @@
 
 .navbar {
   position: absolute;
-  left: 50%;
+  left: calc(50% - 25px);
   transform: translateX(-50%);
   height: 100%;
   width: 50px;

@@ -12,9 +12,9 @@ p {
   font-weight: 300;
   font-family: 'Source Sans Pro', sans-serif; }
 
-.App {
-  text-align: center; }
-
+/*.App {
+  text-align: center;
+}*/
 .App-header {
   height: 150px;
   padding: 20px;
@@ -28,18 +28,21 @@ p {
   left: 30px;
   z-index: 1000; }
 
-.title-container {
+.center-container {
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%); }
-  .title-container .title {
+  -moz-transform: translate(-50%, -50%);
+  padding: 100px; }
+  .center-container .title {
     font-weight: 300;
     font-family: 'Source Sans Pro', sans-serif; }
-  .title-container .intro {
+  .center-container .intro {
     font-size: large; }
+  .center-container .about {
+    line-height: 2em; }
 
 .background {
   width: 100%;
@@ -64,7 +67,7 @@ p {
 
 .navbar {
   position: absolute;
-  left: 50%;
+  left: calc(50% - 25px);
   transform: translateX(-50%);
   height: 100%;
   width: 50px;
