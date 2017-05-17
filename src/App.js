@@ -28,7 +28,6 @@ class App extends Component {
   setRightPanel(newRightPanel) {
     if (this.state.selected === newRightPanel.props.id && this.state.rightPanel.props.id === newRightPanel.props.id) {
       this.setState(prevState => ({
-        rightPanel: (<DefaultRight id="title"/>),
         selected: null
       }));
     } else {
