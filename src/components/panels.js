@@ -93,4 +93,7 @@ function WorkContent(props) {
   )
 }
 
-export { About, Code, Music, Photography, Portrait, Study, Title, Work };
+var DefaultLeft = Portrait;
+var DefaultRight = Title;
+
+export { About, Code, Music, Photography, Portrait, Study, Title, Work, DefaultLeft, DefaultRight };
