@@ -85,15 +85,17 @@ function NavBar(props) {
   return(
     <div className="navbar">
       <Button className="circle white"
-              onMouseOver={ () => { props.changeRightPanel((<AboutPanel/>)) } }
-              onMouseLeave= { () => { props.changeRightPanel((<TitlePanel/>)) } }>
+              onMouseOver={ () => { props.hoverPanel((<AboutPanel/>)) } }
+              onMouseDown={ () => { props.setRightPanel((<AboutPanel/>)) } }
+              onMouseLeave={ () => { props.hoverPanel((<TitlePanel/>)) } }
+              tabIndex="1">
         <FaHeartO/>
       </Button>
-      <Button className="circle white"><FaTerminal/></Button>
-      <Button className="circle white"><FaGraduationCap/></Button>
-      <Button className="circle white"><FaMusic/></Button>
-      <Button className="circle white"><FaCameraRetro/></Button>
-      <Button className="circle white"><FaHeartO/></Button>
+      <Button className="circle white" tabIndex="2"><FaTerminal/></Button>
+      <Button className="circle white" tabIndex="3"><FaGraduationCap/></Button>
+      <Button className="circle white" tabIndex="4"><FaMusic/></Button>
+      <Button className="circle white" tabIndex="5"><FaCameraRetro/></Button>
+      <Button className="circle white" tabIndex="6"><FaHeartO/></Button>
     </div>
   )
 }
@@ -101,27 +103,37 @@ function NavBar(props) {
 class App extends Component {
   constructor(props) {
     super(props);
-    this.changePanel = this.changePanel.bind(this);
-    this.changeRightPanel = this.changeRightPanel.bind(this);
+    this.hoverPanel = this.hoverPanel.bind(this);
+    this.setRightPanel = this.setRightPanel.bind(this);
 
     this.state = {
       leftPanel: (<PortraitPanel/>),
-      rightPanel: (<TitlePanel/>)
+      rightPanel: (<TitlePanel/>),
+      clicked: false
     };
   }
 
-  changePanel(newLeftPanel, newRightPanel) {
+  hoverPanel(newRightPanel) {
+    if (!this.state.clicked) {
+      this.setState(prevState => ({
+        rightPanel: newRightPanel
+      }));
+    }
+  }
+
+  setRightPanel(newRightPanel) {
     this.setState(prevState => ({
-      leftPanel: newLeftPanel,
-      rightPanel: newRightPanel
+      rightPanel: newRightPanel,
+      clicked: true
     }));
   }
 
-  changeRightPanel(newRightPanel) {
+  setClicked(bool) {
     this.setState(prevState => ({
-      rightPanel: newRightPanel
+      clicked: bool
     }));
   }
+
 
   render() {
     return (
@@ -130,7 +142,7 @@ class App extends Component {
           <img src="/img/logo.png" className="App-logo" alt="logo" />
           <div className="background">
             {this.state.leftPanel}
-            <NavBar changeRightPanel={this.changeRightPanel}/>
+            <NavBar hoverPanel={this.hoverPanel} setRightPanel={this.setRightPanel}/>
             {this.state.rightPanel}
           </div>
         </div>
