@@ -74,7 +74,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 180px 0px;
+  padding: 120px 0px;
   z-index: 1000; }
 
 .circle {

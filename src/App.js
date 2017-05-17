@@ -19,22 +19,15 @@ class App extends Component {
 
   hoverPanel(newRightPanel) {
     if (this.state.selected === null && this.state.rightPanel.props.id !== newRightPanel.props.id) {
-      this.setState(prevState => ({
-        rightPanel: newRightPanel
-      }));
+      this.setState(prevState => ({ rightPanel: newRightPanel }));
     }
   }
 
   setRightPanel(newRightPanel) {
     if (this.state.selected === newRightPanel.props.id && this.state.rightPanel.props.id === newRightPanel.props.id) {
-      this.setState(prevState => ({
-        selected: null
-      }));
+      this.setState(prevState => ({ selected: null }));
     } else {
-      this.setState(prevState => ({
-        rightPanel: newRightPanel,
-        selected: newRightPanel.props.id
-      }));
+      this.setState(prevState => ({ rightPanel: newRightPanel, selected: newRightPanel.props.id }));
     }
   }
 

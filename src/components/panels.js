@@ -2,14 +2,35 @@ import React from 'react';
 import Radium from 'radium';
 import styles from '../animations/radium.js';
 import '../App.css';
+import { Button, Row, Col } from 'react-materialize';
 
 var About = Radium(AboutContent);
 var Code = Radium(CodeContent);
+var Dynamo = Radium(DynamoContent);
 var Music = Radium(MusicContent);
 var Photography = Radium(PhotographyContent);
 var Study = Radium(StudyContent);
 var Title = Radium(TitleContent);
 var Work = Radium(WorkContent);
+
+function TitleContent(props) {
+  return(
+    <div className="panel right">
+      <div className="center-container center">
+          <h1 className="title" style={[styles.fadeInDown]}>Hi there! I'm Felix.</h1>
+          <p style={[styles.fadeInDownDelay]}>Hover over or click an icon to learn more about me</p>
+          <Row>
+            <Col s={6} m={6} l={6}>
+              <Button waves="light" className="white" style={{color: 'black'}}>My Resume</Button>
+            </Col>
+            <Col s={6} m={6} l={6}>
+              <Button waves="dark" className="white" style={{color: 'black'}}>Contact Me</Button>
+            </Col>
+          </Row>
+      </div>
+    </div>
+  )
+}
 
 function AboutContent(props) {
   return(
@@ -72,18 +93,17 @@ function StudyContent(props) {
   )
 }
 
-function TitleContent(props) {
+function WorkContent(props) {
   return(
-    <div className="panel right">
-      <div className="center-container center">
-          <h1 className="title" style={[styles.fadeInDown]}>Hi there! I'm Felix.</h1>
-          <p style={[styles.fadeInDownDelay]}>Hover over or click an icon to learn more about me</p>
+    <div className="panel right" style={[styles.fadeIn]}>
+      <div className="center-container">
+
       </div>
     </div>
   )
 }
 
-function WorkContent(props) {
+function DynamoContent(props) {
   return(
     <div className="panel right" style={[styles.fadeIn]}>
       <div className="center-container">
@@ -96,4 +116,4 @@ function WorkContent(props) {
 var DefaultLeft = Portrait;
 var DefaultRight = Title;
 
-export { About, Code, Music, Photography, Portrait, Study, Title, Work, DefaultLeft, DefaultRight };
+export { About, Code, Dynamo, Music, Photography, Portrait, Study, Title, Work, DefaultLeft, DefaultRight };
