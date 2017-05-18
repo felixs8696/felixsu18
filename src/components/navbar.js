@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css';
+import '../styles/navbar.css';
 import FaHeartO from 'react-icons/lib/fa/heart-o';
 import FaTerminal from 'react-icons/lib/fa/terminal';
 import FaGraduationCap from 'react-icons/lib/fa/graduation-cap';

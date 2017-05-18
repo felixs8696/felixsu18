@@ -1,0 +1,41 @@
+@import "public/stylesheets/_global.scss";
+@import "public/stylesheets/_variables.scss";
+
+.background .panel {
+  width: 50%;
+  height: 100%;
+}
+
+.center-container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  padding: 100px;
+
+  .title { @include light-font; }
+  .intro { font-size: large; }
+  .about { line-height: 2em; }
+}
+
+.profile-photo {
+  background: url("../../public/img/portrait.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+.interest-photo {
+  background: url("../../public/img/interests.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+.title-btn {
+  color: black;
+  text-transform: capitalize;
+  font-weight: 400;
+}

@@ -34,8 +34,8 @@ class App extends Component {
   render() {
     return (
       <StyleRoot>
-        <div className="App">
-          <img src="/img/logo.png" className="App-logo" alt="logo" />
+        <div id="app">
+          <img src="/img/logo.png" className="logo" alt="logo" />
           <div className="background">
             {this.state.leftPanel}
             <NavBar hoverPanel={this.hoverPanel} setRightPanel={this.setRightPanel} selected={this.state.selected}/>

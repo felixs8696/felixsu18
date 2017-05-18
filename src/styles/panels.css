@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif; }
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  font-family: 'Source Sans Pro', sans-serif; }
+
+p {
+  font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif; }
+
+.background .panel {
+  width: 50%;
+  height: 100%; }
+
+.center-container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  padding: 100px; }
+  .center-container .title {
+    font-weight: 300;
+    font-family: 'Source Sans Pro', sans-serif; }
+  .center-container .intro {
+    font-size: large; }
+  .center-container .about {
+    line-height: 2em; }
+
+.profile-photo {
+  background: url("../../public/img/portrait.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+.interest-photo {
+  background: url("../../public/img/interests.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: auto 100%; }
+
+.title-btn {
+  color: black;
+  text-transform: capitalize;
+  font-weight: 400; }

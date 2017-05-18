@@ -1,0 +1,39 @@
+@import "public/stylesheets/_global.scss";
+@import "public/stylesheets/_variables.scss";
+
+.navbar {
+  position: absolute;
+  left: calc(50% - #{$navbar-width}/2);
+  transform: translateX(-50%);
+  height: 100%;
+  width: $navbar-width;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 120px 0px;
+  z-index: 1000;
+}
+
+.circle {
+  color: lightgray;
+  border: 2px solid $main-lightgray;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.3em;
+  vertical-align: middle;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: none;
+}
+
+.circle:hover {
+  box-shadow: $lvl1-box-shadow;
+}
+
+.selected-circle {
+  background-color: $accent-blue !important;
+  color: white;
+  border: 0;
+}
