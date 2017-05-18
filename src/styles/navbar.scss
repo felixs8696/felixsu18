@@ -1,5 +1,6 @@
-@import "public/stylesheets/_global.scss";
-@import "public/stylesheets/_variables.scss";
+@import "../../public/stylesheets/_global.scss";
+@import "../../public/stylesheets/_variables.scss";
+@import "./tooltip.scss";
 
 .navbar {
   position: absolute;

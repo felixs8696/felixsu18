@@ -14,7 +14,7 @@ import ReactTooltip from 'react-tooltip';
 function NavBar(props) {
   return(
     <div id="navbar">
-      <ReactTooltip place="left" type="dark" effect="solid"/>
+      <ReactTooltip place="left" type="light" effect="solid"/>
       <div className="navbar">
         <Button className={"circle white " + (props.selected === "about" ? 'selected-circle' : '')}
                 onMouseDown={ () => { props.setRightPanel((<About id="about"/>)) } }
