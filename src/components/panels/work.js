@@ -8,7 +8,7 @@ var Work = Radium(WorkContent);
 var workContents = [
   {
     name: "Amazon",
-    logo: "/companies/amazon.png",
+    logo: "img/companies/amazon.png",
     position: "Software Development Engineer Intern",
     date: "May 2017 - Aug 2017",
     desc: [
@@ -17,7 +17,7 @@ var workContents = [
   },
   {
     name: "Hack In",
-    logo: "/companies/hackin.png",
+    logo: "img/companies/hackin.png",
     position: "Founder",
     date: "Jul 2016 - Present",
     desc: [
@@ -27,7 +27,7 @@ var workContents = [
     ]
   },{
     name: "AKALA",
-    logo: "/companies/akala.png",
+    logo: "img/companies/akala.png",
     position: "Full Stack Software Engineer Intern",
     date: "Sep 2015 - Jul 2016",
     desc: [
@@ -37,7 +37,7 @@ var workContents = [
   },
   {
     name: "Beeyond Inc.",
-    logo: "/companies/beeyond.png",
+    logo: "img/companies/beeyond.png",
     position: "Software Engineer Intern - Mobile Applications",
     date: "Jun 2015 - Sep 2015",
     desc: [
@@ -49,7 +49,7 @@ var workContents = [
   },
   {
     name: "The Princeton Education Network",
-    logo: "/companies/princetoned.png",
+    logo: "img/companies/princetoned.png",
     position: "Web Designer",
     date: "Jun 2015 - Sep 2015",
     desc: [
@@ -59,11 +59,43 @@ var workContents = [
   }
 ]
 
-function WorkContent(props) {
+function JobsList(props) {
+  var divs = [];
+  props.jobs.forEach(function (job, i) {
+    divs.push(<JobContent key={i} jobName={job.name} jobLogo={job.logo} jobPosition={job.position} jobDate={job.date} jobDesc={job.desc}/>);
+  });
+  return <div className="jobs-list">{divs}</div>;
+}
+
+function JobContent(props) {
+  function description(desc) {
+    var list = [];
+    desc.forEach(function (d, i) {
+      list.push(<li key={i}>{d.content}</li>);
+    });
+    return <ul className="list">{list}</ul>;
+  }
+
+  return(
+    <div className="job">
+      <div className="photo"><img className="job-logo" src={props.jobLogo} alt={props.jobName}/></div>
+      <div className="separator"></div>
+      <div className="description">
+        <div className="job-name">{props.jobName}</div>
+        <div className="job-position">{props.jobPosition}</div>
+        <div className="job-date">{props.jobDate}</div>
+        {description(props.jobDesc)}
+      </div>
+    </div>
+  )
+}
+
+function WorkContent() {
   return(
     <div className="panel right" style={[styles.fadeIn]}>
       <div className="center-container">
         <h3>Worker</h3>
+        <JobsList jobs={workContents}/>
       </div>
     </div>
   )
