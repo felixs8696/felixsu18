@@ -1,0 +1,61 @@
+@import "../../public/stylesheets/_global.scss";
+@import "../../public/stylesheets/_variables.scss";
+
+.job {
+	margin-bottom: 2em;
+
+	.photo {
+		width: 20%;
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+
+		.job-logo {
+			width: 80%;
+			position: absolute;
+			box-shadow: $lvl1-box-shadow;
+		}
+	}
+
+	.description {
+		width: 80%;
+		vertical-align: top;
+		display: inline-block;
+
+		.job-title {
+			display: inline-block;
+
+			.job-name {
+				@include header-font;
+			}
+
+			.job-position {
+				@include regular-font;
+			}
+		}
+
+		.job-date {
+			@include regular-font;
+			display: inline-block;
+			float: right;
+			vertical-align: top;
+		}
+
+		.list {
+			font-size: 1rem;
+			padding-left: 1em;
+  			list-style-position: outside;
+  			margin-top: .5em;
+
+			li:before {
+				content: "–";
+				margin-left: -1em;
+				margin-right: .5em;
+			}
+
+			li {
+				margin: .5rem 0;
+			}
+		}
+	}
+}

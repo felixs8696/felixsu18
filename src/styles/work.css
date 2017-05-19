@@ -1,0 +1,55 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif; }
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  font-family: 'Source Sans Pro', sans-serif; }
+
+p {
+  font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif; }
+
+.job {
+  margin-bottom: 2em; }
+  .job .photo {
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+    position: relative; }
+    .job .photo .job-logo {
+      width: 80%;
+      position: absolute;
+      box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.14), 0 0 7px 0 rgba(0, 0, 0, 0.12), 0 0 1px -1px rgba(0, 0, 0, 0.2); }
+  .job .description {
+    width: 80%;
+    vertical-align: top;
+    display: inline-block; }
+    .job .description .job-title {
+      display: inline-block; }
+      .job .description .job-title .job-name {
+        font-weight: 700;
+        font-family: 'Source Sans Pro', sans-serif; }
+      .job .description .job-title .job-position {
+        font-weight: 400;
+        font-family: 'Source Sans Pro', sans-serif; }
+    .job .description .job-date {
+      font-weight: 400;
+      font-family: 'Source Sans Pro', sans-serif;
+      display: inline-block;
+      float: right;
+      vertical-align: top; }
+    .job .description .list {
+      font-size: 1rem;
+      padding-left: 1em;
+      list-style-position: outside;
+      margin-top: .5em; }
+      .job .description .list li:before {
+        content: "–";
+        margin-left: -1em;
+        margin-right: .5em; }
+      .job .description .list li {
+        margin: .5rem 0; }
